@@ -7,6 +7,10 @@ This work was introduced in [Fast, Fine-Grained Equivalence Checking for Neural 
 
 For the artifacts used to evaluate Codealign, see the [companion evaluation repository](https://github.com/squaresLab/codealigneval).
 
+Codealigner.py is a bash GUI tool to make codealign more clear and accessible.
+Initialise codealign module following instructions below, before running ```codealigner.py```
+
+
 # Installation
 
 Codealign is a python package.
@@ -20,7 +24,24 @@ then optionally
 python -m unittest
 ```
 
+Also, install ```codealigner.py```'s dependencies using
+```
+pip install -r requirements.txt
+```
+
 # Usage
+
+## Option 1. ```Codealigner.py```
+
+In your terminal, run 
+```
+python3 codealigner.py -r <path_to_reference_c_file> -p <path_to_decompiled_c_file>
+```
+
+* -r argument is for the **reference/original** C file
+* -p arg is for the neurally decompiled C file
+
+## Option 2. Original codealign module
 
 ```python
 from codealign import align, Alignment
