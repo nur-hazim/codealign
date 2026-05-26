@@ -10,7 +10,7 @@ from tree_sitter import Language, Parser, Node
 
 from ..ir import *
 
-C_LANGUAGE = Language(tree_sitter_c.language())
+C_LANGUAGE = Language(tree_sitter_c.language(), "c")
 parser = Parser(C_LANGUAGE)
 
 class SemanticError(Exception):
