@@ -11,9 +11,9 @@ from .c import print_immediate_children, print_types_recursively # for debugging
 from .c import BlockSuccessorAssignment, Next, Continue, Break, SemanticError, clean_up_empty_blocks, error_check, ASSIGNMENT_SUBOPS
 from ..ir import *
 
-PYTHON_LANGUAGE = tree_sitter_python.language()
-parser = Parser(PYTHON_LANGUAGE)
-# parser.set_language(PYTHON_LANGUAGE)
+PYTHON_LANGUAGE = Language(tree_sitter_python.language(), "python")
+parser = Parser()
+parser.set_language(PYTHON_LANGUAGE)
 
 ITERATOR_FN_NAME = "next"
 
